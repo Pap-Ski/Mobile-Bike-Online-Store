@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-import BikeObjs from "./BikeObjs";
+import BikeObjs from "../../../data/BikeObjs";
 
 const Bike = ({ src, name, price }) => {
   return (

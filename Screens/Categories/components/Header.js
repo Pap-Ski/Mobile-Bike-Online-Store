@@ -12,7 +12,7 @@ const Header = () => {
     <View style={styles.header}>
       <View style={styles.headerIcons}>
         <EvilIcons name="navicon" size={24} color="black" />
-        <MaterialIcons name="electric-bike" size={24} color="black" />
+        <MaterialIcons name="electric-bike" size={24} color="white" />
         <View
           style={{
             width: 50,

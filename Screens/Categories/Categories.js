@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import Header from "./Header";
-import Nav from "./Nav";
-import Footer from "./Footer";
-import Bikes from "./Bikes";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Bikes from "./components/Bikes";
 
 const Categories = () => {
   return (
