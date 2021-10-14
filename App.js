@@ -7,8 +7,9 @@ import Cart from "./Screens/Cart/Cart";
 export default function App() {
   return (
     <View style={{ flex: 1 }}>
-      {/* <Categories /> */}
-      <Cart />
+      <Categories />
+      {/* <Cart /> */}
+      {/* <Login /> */}
     </View>
   );
 }

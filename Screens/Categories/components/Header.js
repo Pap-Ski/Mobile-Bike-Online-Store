@@ -7,7 +7,7 @@ import {
   Ionicons,
 } from "@expo/vector-icons";
 
-const Header = () => {
+const Header = ({ color }) => {
   return (
     <View style={styles.header}>
       <View style={styles.headerIcons}>
@@ -26,7 +26,7 @@ const Header = () => {
       </View>
       <View style={styles.headerText}>
         <Text style={{ fontSize: 16 }}>The World's </Text>
-        <Text style={{ fontSize: 20, fontWeight: "bold", color: "#51AD60" }}>
+        <Text style={{ fontSize: 20, fontWeight: "bold", color: color }}>
           Best Bike
         </Text>
       </View>

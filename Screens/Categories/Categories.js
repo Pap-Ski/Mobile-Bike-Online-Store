@@ -4,15 +4,16 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Bikes from "./components/Bikes";
+import { mainColor } from "../../general/Utilities";
 
 const Categories = () => {
   return (
     <View style={styles.main}>
-      <Header />
+      <Header color={mainColor} />
       <Text style={{ fontSize: 20, fontWeight: "bold", marginVertical: 10 }}>
         Categories
       </Text>
-      <Nav />
+      <Nav color={mainColor} />
       <Bikes />
       <Footer />
     </View>

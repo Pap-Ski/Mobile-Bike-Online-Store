@@ -53,7 +53,7 @@ const CartCheckout = ({ bikes }) => {
 
 const styles = StyleSheet.create({
   bill: {
-    marginTop: 20,
+    marginTop: 10,
     backgroundColor: "#eee",
     padding: 20,
     borderRadius: 30,

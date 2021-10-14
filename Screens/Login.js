@@ -4,6 +4,18 @@ import { AntDesign } from "@expo/vector-icons";
 import { mainColor } from "../general/Utilities";
 
 const LoginButton = ({ logo, bgc, text, col }) => {
+  let socialLogo;
+  if (logo === "google") {
+    socialLogo = (
+      <Image
+        style={{ width: 30, height: 30 }}
+        source={require("../assets/google-logo.jpg")}
+      ></Image>
+    );
+  } else {
+    socialLogo = <AntDesign name={logo} size={24} color="white" />;
+  }
+
   return (
     <TouchableOpacity
       style={{
@@ -17,12 +29,10 @@ const LoginButton = ({ logo, bgc, text, col }) => {
         backgroundColor: bgc,
       }}
     >
-      <AntDesign
-        name={logo}
-        size={24}
-        color={logo === "apple1" ? "white" : "black"}
-      />
-      <Text style={{ color: col, marginLeft: 20 }}>Login with {text}</Text>
+      {socialLogo}
+      <Text style={{ color: col, marginLeft: 20, fontSize: 18 }}>
+        Login with {text}
+      </Text>
     </TouchableOpacity>
   );
 };
