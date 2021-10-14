@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { mainColor } from "../general/Utilities";
 
 const LoginButton = ({ logo, bgc, text, col }) => {
   return (
@@ -39,7 +40,7 @@ export default Login = () => {
       <LoginButton logo="apple1" bgc="#000" text="Apple" col="#fff" />
       <Text style={{ marginTop: 10, fontSize: 20 }}>
         Not a member?{" "}
-        <Text style={{ fontWeight: "bold", color: "#51AD60" }}>Sign up</Text>
+        <Text style={{ fontWeight: "bold", color: mainColor }}>Sign up</Text>
       </Text>
     </View>
   );

@@ -1,27 +1,48 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { Price, mainColor } from "../../../general/Utilities";
 
-const CartItemImage = () => {
+const CartList = ({ bikes }) => {
   return (
-    <View style={styles.cartItemImage}>
-      <Image
-        style={{ width: "100%", height: "100%" }}
-        source={require("../../../assets/mountainBike-Login.jpg")}
-      ></Image>
+    <View>
+      {bikes.map(({ id, src, price, name, type }) => (
+        <CartListItem
+          key={id}
+          src={src}
+          name={name}
+          type={type}
+          price={price}
+        />
+      ))}
     </View>
   );
 };
 
-const ItemDescription = () => {
+const CartListItem = ({ src, price, name, type }) => {
+  return (
+    <View style={styles.cartItem}>
+      <CartItemImage src={src} />
+      <ItemDescription price={price} name={name} type={type} />
+      <ItemAction />
+    </View>
+  );
+};
+
+const CartItemImage = ({ src }) => {
+  return (
+    <View style={styles.cartItemImage}>
+      <Image style={{ width: "100%", height: "100%" }} source={src}></Image>
+    </View>
+  );
+};
+
+const ItemDescription = ({ name, type, price }) => {
   return (
     <View style={styles.itemDescription}>
-      <Text style={{ fontSize: 20 }}>asdfasd</Text>
-      <Text>sdfg</Text>
-      <View style={{ flexDirection: "row", alignItems: "baseline" }}>
-        <Text style={{ color: "#51AD60", fontSize: 16 }}>$ </Text>
-        <Text style={{ fontWeight: "bold", fontSize: 20 }}>sdfgsdf</Text>
-      </View>
+      <Text style={{ fontSize: 20 }}>{name}</Text>
+      <Text style={{ color: "#aaa" }}>{type}</Text>
+      <Price price={price} />
     </View>
   );
 };
@@ -32,7 +53,7 @@ const ItemAction = () => {
       <Feather
         name="trash-2"
         size={24}
-        color="#51AD60"
+        color={mainColor}
         style={{ alignSelf: "flex-end" }}
       />
       <View style={styles.itemCounter}>
@@ -44,7 +65,7 @@ const ItemAction = () => {
         </TouchableOpacity>
         <Text>1</Text>
         <TouchableOpacity
-          style={{ ...styles.counter, backgroundColor: "#51AD60" }}
+          style={{ ...styles.counter, backgroundColor: mainColor }}
         >
           <Text style={{ color: "#fff" }}>+</Text>
         </TouchableOpacity>
@@ -53,24 +74,11 @@ const ItemAction = () => {
   );
 };
 
-const CartListItem = () => {
-  return (
-    <View style={styles.cartItem}>
-      <CartItemImage />
-      <ItemDescription />
-      <ItemAction />
-    </View>
-  );
-};
-
-const CartList = () => {
-  return <CartListItem />;
-};
-
 const styles = StyleSheet.create({
   cartItem: {
     flexDirection: "row",
     justifyContent: "space-between",
+    marginBottom: 22,
   },
   cartItemImage: {
     width: 90,

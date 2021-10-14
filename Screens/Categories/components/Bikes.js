@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-import BikeObjs from "../../../data/BikeObjs";
+import BikeObjs from "../../../general/BikeObjs";
+import { Price } from "../../../general/Utilities";
 
 const Bike = ({ src, name, price }) => {
   return (
@@ -20,10 +21,7 @@ const Bike = ({ src, name, price }) => {
       ></Image>
       <View style={{ justifyContent: "center", alignItems: "center" }}>
         <Text style={{ color: "#999", fontWeight: "700" }}>{name}</Text>
-        <View style={{ flexDirection: "row" }}>
-          <Text style={{ color: "#51AD60" }}>$ </Text>
-          <Text style={{ fontWeight: "bold" }}>{price}</Text>
-        </View>
+        <Price price={price} />
       </View>
     </View>
   );

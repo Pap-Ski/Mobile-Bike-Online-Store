@@ -7,7 +7,7 @@ const CartHeader = () => {
     <View style={styles.header}>
       <View>
         <Ionicons
-          styly={{ flex: 1 }}
+          style={{ flex: 1 }}
           name="arrow-back-outline"
           size={24}
           color="black"
@@ -19,8 +19,8 @@ const CartHeader = () => {
           alignItems: "center",
         }}
       >
-        <Text style={{ fontWeight: "bold", fontSize: 23 }}>Cart list</Text>
-        <Text style={{ fontSize: 18, color: "#aaa" }}>(3 items)</Text>
+        <Text style={{ fontWeight: "bold", fontSize: 20 }}>Cart list</Text>
+        <Text style={{ fontSize: 16, color: "#aaa" }}>(3 items)</Text>
       </View>
     </View>
   );
