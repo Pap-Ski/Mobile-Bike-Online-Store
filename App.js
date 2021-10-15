@@ -8,8 +8,8 @@ export default function App() {
   return (
     <View style={{ flex: 1 }}>
       {/* <Categories /> */}
-      {/* <Cart /> */}
-      <Login />
+      <Cart />
+      {/* <Login /> */}
     </View>
   );
 }
