@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather, Foundation, FontAwesome5 } from "@expo/vector-icons";
 import { mainColor } from "../../../general/Utilities";
 
-const Footer = () => {
+const Footer = ({ navigation }) => {
   return (
     <View style={styles.footer}>
       <Foundation name="home" size={24} color={mainColor} />
@@ -22,7 +22,9 @@ const Footer = () => {
       >
         <FontAwesome5 name="microphone" size={24} color="white" />
       </TouchableOpacity>
-      <Feather name="shopping-bag" size={24} color="#999" />
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+        <Feather name="shopping-bag" size={24} color="#999" />
+      </TouchableOpacity>
     </View>
   );
 };

@@ -3,10 +3,12 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather, Foundation, FontAwesome5 } from "@expo/vector-icons";
 import { mainColor } from "../../../general/Utilities";
 
-const Footer = () => {
+const Footer = ({ navigation }) => {
   return (
     <View style={styles.footer}>
-      <Foundation name="home" size={24} color="#999" />
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+        <Foundation name="home" size={24} color="#999" />
+      </TouchableOpacity>
       <TouchableOpacity
         style={{
           justifyContent: "center",

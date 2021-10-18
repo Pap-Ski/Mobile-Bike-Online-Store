@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Bikes from "./components/Bikes";
 import { mainColor } from "../../general/Utilities";
 
-const Categories = () => {
+const Categories = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <Header color={mainColor} />
@@ -15,7 +15,7 @@ const Categories = () => {
       </Text>
       <Nav color={mainColor} />
       <Bikes />
-      <Footer />
+      <Footer navigation={navigation} />
     </View>
   );
 };

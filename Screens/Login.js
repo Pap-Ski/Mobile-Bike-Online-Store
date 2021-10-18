@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { mainColor } from "../general/Utilities";
 
-const LoginButton = ({ logo, bgc, text, col }) => {
+const LoginButton = ({ navigation, logo, bgc, text, col }) => {
   let socialLogo;
   if (logo === "google") {
     socialLogo = (
@@ -18,6 +18,7 @@ const LoginButton = ({ logo, bgc, text, col }) => {
 
   return (
     <TouchableOpacity
+      onPress={() => navigation.navigate("Categories")}
       style={{
         justifyContent: "center",
         alignItems: "center",
@@ -37,7 +38,7 @@ const LoginButton = ({ logo, bgc, text, col }) => {
   );
 };
 
-export default Login = () => {
+export default Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
@@ -46,8 +47,20 @@ export default Login = () => {
       />
       <Text style={{ fontSize: 32 }}>Welcome to</Text>
       <Text style={{ fontSize: 32, fontWeight: "bold" }}>Power Bike Shop</Text>
-      <LoginButton logo="google" bgc="#f8f8f8" text="Gmail" col="#000" />
-      <LoginButton logo="apple1" bgc="#000" text="Apple" col="#fff" />
+      <LoginButton
+        navigation={navigation}
+        logo="google"
+        bgc="#f8f8f8"
+        text="Gmail"
+        col="#000"
+      />
+      <LoginButton
+        navigation={navigation}
+        logo="apple1"
+        bgc="#000"
+        text="Apple"
+        col="#fff"
+      />
       <Text style={{ marginTop: 10, fontSize: 20 }}>
         Not a member?{" "}
         <Text style={{ fontWeight: "bold", color: mainColor }}>Sign up</Text>

@@ -8,13 +8,13 @@ import BikeObjs from "../../general/BikeObjs";
 
 const bikes = BikeObjs.filter(({ id }) => id < 4);
 
-const Cart = () => {
+const Cart = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <CartHeader />
       <CartList bikes={bikes} />
       <CartCheckout bikes={bikes} />
-      <CartFooter />
+      <CartFooter navigation={navigation} />
     </View>
   );
 };
