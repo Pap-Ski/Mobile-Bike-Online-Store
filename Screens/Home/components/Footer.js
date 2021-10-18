@@ -6,9 +6,7 @@ import { mainColor } from "../../../general/Utilities";
 const Footer = ({ navigation }) => {
   return (
     <View style={styles.footer}>
-      <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-        <Foundation name="home" size={24} color="#999" />
-      </TouchableOpacity>
+      <Foundation name="home" size={24} color={mainColor} />
       <TouchableOpacity
         style={{
           justifyContent: "center",
@@ -24,7 +22,9 @@ const Footer = ({ navigation }) => {
       >
         <FontAwesome5 name="microphone" size={24} color="white" />
       </TouchableOpacity>
-      <Feather name="shopping-bag" size={24} color={mainColor} />
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+        <Feather name="shopping-bag" size={24} color="#999" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     backgroundColor: "#eee",
+    height: 100,
     position: "absolute",
     bottom: 0,
     right: 0,

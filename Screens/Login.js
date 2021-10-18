@@ -18,7 +18,7 @@ const LoginButton = ({ navigation, logo, bgc, text, col }) => {
 
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("Categories")}
+      onPress={() => navigation.navigate("Home")}
       style={{
         justifyContent: "center",
         alignItems: "center",
