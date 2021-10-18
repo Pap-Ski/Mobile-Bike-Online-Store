@@ -4,12 +4,12 @@
 
 ### Login
 
-<img width="400" src="screenshots/login.jpeg"/>
+<img width="375" src="screenshots/login.jpeg"/>
 
-### Categories
+### Home
 
-<img width="400" src="screenshots/Categories.jpeg"/>
+<img width="375" src="screenshots/Categories.jpeg"/>
 
 ### Carts
 
-<img width="400" src="screenshots/cart.jpeg"/>
+<img width="375" src="screenshots/cart.jpeg"/>
