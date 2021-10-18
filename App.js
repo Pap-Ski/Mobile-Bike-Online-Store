@@ -22,10 +22,5 @@ export default function App() {
         </MainNavigator.Navigator>
       </NavigationContainer>
     </View>
-    // <View style={{ flex: 1 }}>
-    //   {/* <Categories /> */}
-    //   <Cart />
-    //   {/* <Login /> */}
-    // </View>
   );
 }

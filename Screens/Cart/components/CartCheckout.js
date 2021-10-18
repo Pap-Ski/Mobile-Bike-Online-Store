@@ -27,7 +27,6 @@ const CartCheckout = ({ bikes }) => {
           style={{
             ...styles.billParameter,
             borderTopWidth: 2,
-            borderTop: "dotted",
           }}
         >
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>Total</Text>
